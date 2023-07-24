@@ -1,0 +1,52 @@
+[
+  {
+    "PizzaType": "Margherita",
+    "ServingSize": "30cm Durchmesser",
+    "Calories": 800,
+    "Fat": 25,
+    "SaturatedFat": 10,
+    "Carbohydrates": 100,
+    "Sugar": 7,
+    "Protein": 35
+  },
+  {
+    "PizzaType": "Salami",
+    "ServingSize": "30cm Durchmesser",
+    "Calories": 850,
+    "Fat": 30,
+    "SaturatedFat": 12,
+    "Carbohydrates": 100,
+    "Sugar": 8,
+    "Protein": 40
+  },
+  {
+    "PizzaType": "Hawaiian",
+    "ServingSize": "30cm Durchmesser",
+    "Calories": 900,
+    "Fat": 28,
+    "SaturatedFat": 12,
+    "Carbohydrates": 105,
+    "Sugar": 15,
+    "Protein": 38
+  },
+  {
+    "PizzaType": "Vegetarian",
+    "ServingSize": "30cm Durchmesser",
+    "Calories": 750,
+    "Fat": 20,
+    "SaturatedFat": 8,
+    "Carbohydrates": 105,
+    "Sugar": 7,
+    "Protein": 30
+  },
+  {
+    "PizzaType": "Test",
+    "ServingSize": "30cm Durchmesser",
+    "Calories": 999,
+    "Fat": 777,
+    "SaturatedFat": 888,
+    "Carbohydrates": 666,
+    "Sugar": 111,
+    "Protein": 333
+  }
+]
