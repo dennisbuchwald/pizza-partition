@@ -1,29 +1,20 @@
-import React, { useState } from "react";
+import Image from "next/image";
 import styled from "styled-components";
 import PizzaSliceCalculator from "../../components/PizzaSliceCalculator";
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 `;
 
 const Index = () => {
-  const [pizzaType, setPizzaType] = useState("Margherita");
-  const [diameter, setDiameter] = useState(30);
-  const [slices, setSlices] = useState(8);
-
   return (
     <Container>
-      <PizzaSliceCalculator
-        pizzaType={pizzaType}
-        setPizzaType={setPizzaType}
-        diameter={diameter}
-        setDiameter={setDiameter}
-        slices={slices}
-        setSlices={setSlices}
-      />
+      <Image src="/logo.png" alt="Company Logo" width={150} height={150} />
+      <PizzaSliceCalculator />
     </Container>
   );
 };
