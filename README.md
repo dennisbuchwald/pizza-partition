@@ -1,39 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pizza Partition 🍕
 
-## Getting Started
+Willkommen bei Pizza Partition, einer einfachen, aber leistungsstarken Webanwendung, die Ihnen hilft, Ihre Pizza auf eine vollkommen neue Art und Weise zu sehen und zu verstehen.
 
-First, run the development server:
+## Funktionen
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **Flächenberechnung pro Pizzastück**: Geben Sie den Durchmesser Ihrer Pizza und die Anzahl der Stücke ein, und Pizza Partition berechnet automatisch die Fläche jedes Stücks in Quadratzentimetern.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Nährwertinformationen pro Pizzastück**: Wählen Sie den Pizzatyp aus der Dropdown-Liste aus, und Pizza Partition zeigt Ihnen die Nährwerte (Kalorien, Protein, Fett, Kohlenhydrate) pro Pizzastück an, basierend auf gängigen Durchschnittswerten.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Wie es funktioniert
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Die Berechnung der Fläche pro Pizzastück basiert auf der Formel für die Fläche eines Kreises (`pi * radius^2`), wobei der Radius die Hälfte des Durchmessers der Pizza ist. Diese Fläche wird dann durch die Anzahl der Stücke geteilt, um die Fläche pro Stück zu erhalten.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Die Nährwertinformationen basieren auf Durchschnittswerten für gängige Pizzatypen. Diese Werte werden dann durch die Anzahl der Stücke geteilt, um die Nährwerte pro Stück zu erhalten.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Erreichbarkeit
 
-## Learn More
+Sie können die Anwendung unter folgender URL erreichen: [pizza-partition.dennisbuchwald.de](http://pizza-partition.dennisbuchwald.de)
 
-To learn more about Next.js, take a look at the following resources:
+## Kontakt
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# pizza-partition
+Für weitere Informationen oder Feedback, bitte kontaktieren Sie mich unter meiner E-Mail-Adresse: [dhallo@dennisbuchwald.de](mailto:hallo@dennisbuchwald.de)
