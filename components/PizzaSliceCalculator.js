@@ -7,6 +7,69 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50rem; /* feste Breite eingestellt */
+  margin: auto;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+`;
+
+const StyledParagraph = styled.p`
+  font-family: "Roboto_Regular", sans-serif;
+  color: white;
+  font-size: 2rem;
+  padding-top: 1rem;
+`;
+
+const StyledLabel = styled.label`
+  font-family: "Roboto_Regular", sans-serif;
+  color: white;
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+`;
+
+const StyledInput = styled.input`
+  padding: 2.5rem;
+  font-size: 3rem;
+  width: 100%; /* feste Breite eingestellt */
+`;
+
+const StyledSelect = styled.select`
+  /* Füge hier deinen CSS Code ein */
+  padding: 1rem; /* größere Polsterung */
+  font-size: 1.5rem; /* größere Schriftgröße */
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+`;
+
+const StyledButton = styled.button`
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: #007bff;
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  &:hover:enabled {
+    background-color: #0056b3;
+  }
+`;
+
+const StyledBackButton = styled(StyledButton)`
+  margin-right: auto;
+`;
+
+const StyledNextButton = styled(StyledButton)`
+  margin-left: auto;
 `;
 
 const PizzaSliceCalculator = () => {
@@ -19,6 +82,28 @@ const PizzaSliceCalculator = () => {
   const [slices, setSlices] = useState(0);
   const [price, setPrice] = useState(0);
   const [currentNutritionalValues, setCurrentNutritionalValues] = useState({});
+
+  const isSelectionMade = (step) => {
+    switch (step) {
+      case 0:
+        return pizzaType !== "";
+      case 1:
+        return shape !== "";
+      case 2:
+        if (shape === "circle") {
+          return diameter !== 0;
+        } else if (shape === "rectangle") {
+          return length !== 0 && width !== 0;
+        }
+        return false;
+      case 3:
+        return slices !== 0;
+      case 4:
+        return price !== 0;
+      default:
+        return false;
+    }
+  };
 
   // Helper function to find nutritional values for the given pizza type
   const findNutritionValues = (type) => {
@@ -95,109 +180,123 @@ const PizzaSliceCalculator = () => {
     switch (step) {
       case 0:
         return (
-          <label>
+          <StyledLabel>
             Was für eine Pizza hast du gegessen?
-            <select value={pizzaType} onChange={handlePizzaTypeChange}>
+            <StyledSelect value={pizzaType} onChange={handlePizzaTypeChange}>
               <option value="">-- wähle eine Pizza --</option>
               {nutritionalValues.map((pizza, index) => (
                 <option key={index} value={pizza.PizzaType}>
                   {pizza.PizzaType}
                 </option>
               ))}
-            </select>
-          </label>
+            </StyledSelect>
+          </StyledLabel>
         );
       case 1:
         return (
-          <label>
+          <StyledLabel>
             Welche Form hatte diese?
-            <select value={shape} onChange={handleShapeChange}>
+            <StyledSelect value={shape} onChange={handleShapeChange}>
               <option value="">-- wähle eine Form --</option>
               <option value="circle">Rund</option>
               <option value="rectangle">Rechteckig</option>
-            </select>
-          </label>
+            </StyledSelect>
+          </StyledLabel>
         );
       case 2:
         if (shape === "circle") {
           return (
-            <label>
+            <StyledLabel>
               Durchmesser (cm):
-              <input
+              <StyledInput
                 type="number"
                 value={diameter}
                 onChange={handleDiameterChange}
               />
-            </label>
+            </StyledLabel>
           );
         } else if (shape === "rectangle") {
           return (
             <>
-              <label>
+              <StyledLabel>
                 Länge (cm):
-                <input
+                <StyledInput
                   type="number"
                   value={length}
                   onChange={handleLengthChange}
                 />
-              </label>
-              <label>
+              </StyledLabel>
+              <StyledLabel>
                 Breite (cm):
-                <input
+                <StyledInput
                   type="number"
                   value={width}
                   onChange={handleWidthChange}
                 />
-              </label>
+              </StyledLabel>
             </>
           );
         }
         return null;
       case 3:
         return (
-          <label>
+          <StyledLabel>
             Wie viele Stücke hast du geschnitten?
-            <input type="number" value={slices} onChange={handleSlicesChange} />
-          </label>
+            <StyledInput
+              type="number"
+              value={slices}
+              onChange={handleSlicesChange}
+            />
+          </StyledLabel>
         );
       case 4:
         return (
-          <label>
+          <StyledLabel>
             Wie teuer war die Pizza?
-            <input type="number" value={price} onChange={handlePriceChange} />
-          </label>
+            <StyledInput
+              type="number"
+              value={price}
+              onChange={handlePriceChange}
+            />
+          </StyledLabel>
         );
       case 5:
         return (
           <div>
-            <p>Fläche des Pizzastücks: {calculatePizzaSliceArea()} cm²</p>
-            <p>Preis pro Stück: {calculatePricePerSlice()} €</p>
-            <h2>Nährwerte pro Stück</h2>
-            <p>
+            <StyledParagraph>
+              Fläche des Pizzastücks: {calculatePizzaSliceArea()} cm²
+            </StyledParagraph>
+            <StyledParagraph>
+              Preis pro Stück: {calculatePricePerSlice()} €
+            </StyledParagraph>
+            <br />
+            <br />
+            <StyledParagraph>Nährwerte pro Stück:</StyledParagraph>
+            <StyledParagraph>
               Kalorien:{" "}
               {currentNutritionalValues &&
                 calculateNutritionPerSlice(currentNutritionalValues.Calories)}
-            </p>
-            <p>
+            </StyledParagraph>
+            <StyledParagraph>
               Eiweiß:{" "}
               {currentNutritionalValues &&
                 calculateNutritionPerSlice(currentNutritionalValues.Protein)}
               g
-            </p>
-            <p>
+            </StyledParagraph>
+            <StyledParagraph>
               Fett:{" "}
               {currentNutritionalValues &&
                 calculateNutritionPerSlice(currentNutritionalValues.Fat)}
               g
-            </p>
-            <p>
+            </StyledParagraph>
+            <StyledParagraph>
               Kohlenhydrate:{" "}
               {currentNutritionalValues &&
                 calculateNutritionPerSlice(
                   currentNutritionalValues.Carbohydrates
                 )}
               g
-            </p>
+            </StyledParagraph>
           </div>
         );
       default:
@@ -215,10 +314,20 @@ const PizzaSliceCalculator = () => {
 
   return (
     <Container>
-      <h1>PizzaPartition</h1>
       {renderStepContent(step)}
-      {step > 0 && <button onClick={handleBack}>Zurück</button>}
-      {step < 5 && <button onClick={handleNext}>Weiter</button>}
+      <ButtonContainer>
+        {step > 0 && (
+          <StyledBackButton onClick={handleBack}>Zurück</StyledBackButton>
+        )}
+        {step < 5 && (
+          <StyledNextButton
+            disabled={!isSelectionMade(step)}
+            onClick={handleNext}
+          >
+            Weiter
+          </StyledNextButton>
+        )}
+      </ButtonContainer>
     </Container>
   );
 };
