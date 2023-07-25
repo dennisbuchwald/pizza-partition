@@ -7,7 +7,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50rem; /* feste Breite eingestellt */
+  width: 30rem;
   margin: auto;
 `;
 
@@ -15,14 +15,15 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 `;
 
 const StyledParagraph = styled.p`
   font-family: "Roboto_Regular", sans-serif;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding-top: 1rem;
+  padding-left: 10rem;
 `;
 
 const StyledLabel = styled.label`
@@ -34,33 +35,57 @@ const StyledLabel = styled.label`
 `;
 
 const StyledInput = styled.input`
-  padding: 2.5rem;
-  font-size: 3rem;
-  width: 100%; /* feste Breite eingestellt */
+  margin-top: 1rem;
+  display: flex;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  width: 15em;
+  height: 2em;
+  padding: 0 4em 0 1em;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
+      no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, $glass-icon 3em, $glass 3em);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 `;
 
 const StyledSelect = styled.select`
-  /* Füge hier deinen CSS Code ein */
-  padding: 1rem; /* größere Polsterung */
-  font-size: 1.5rem; /* größere Schriftgröße */
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  margin-top: 1rem;
+  display: flex;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  width: 15em;
+  height: 2em;
+  padding: 0 4em 0 1em;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
+      no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, $glass-icon 3em, $glass 3em);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 `;
 
 const StyledButton = styled.button`
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   font-size: 1rem;
   cursor: pointer;
   border: none;
-  color: white;
-  background-color: #007bff;
+  border-radius: 20px;
+  color: black;
+  background-color: #d49b17;
   &:disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }
   &:hover:enabled {
-    background-color: #0056b3;
+    background-color: #8c660d;
   }
 `;
 
