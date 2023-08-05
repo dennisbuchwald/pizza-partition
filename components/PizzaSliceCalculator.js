@@ -60,6 +60,10 @@ const StyledParagraphContainer = styled.div`
   margin-bottom: 1rem;
 `;
 
+const StyledToggleLabel = styled.span`
+  font-size: 1rem;
+`;
+
 const StyledInput = styled.input`
   margin-top: 1rem;
   display: flex;
@@ -391,7 +395,7 @@ const PizzaSliceCalculator = () => {
         return (
           <>
             <StyledLabel>
-              Pro Stück - Pro Pizza
+              <StyledToggleLabel>Pro Stück - Pro Pizza</StyledToggleLabel>
               <StyledToggle checked={displayWholePizza}>
                 <input
                   type="checkbox"
