@@ -20,6 +20,16 @@
     "Protein": 40
   },
   {
+    "PizzaType": "Prosciutto",
+    "ServingSize": "30cm Durchmesser",
+    "Calories": 850,
+    "Fat": 30,
+    "SaturatedFat": 12,
+    "Carbohydrates": 90,
+    "Sugar": 5,
+    "Protein": 45
+  },
+  {
     "PizzaType": "Hawaiian",
     "ServingSize": "30cm Durchmesser",
     "Calories": 900,
@@ -40,13 +50,63 @@
     "Protein": 30
   },
   {
-    "PizzaType": "Test",
+    "PizzaType": "Pepperoni",
     "ServingSize": "30cm Durchmesser",
-    "Calories": 999,
-    "Fat": 777,
-    "SaturatedFat": 888,
-    "Carbohydrates": 666,
-    "Sugar": 111,
-    "Protein": 333
+    "Calories": 880,
+    "Fat": 35,
+    "SaturatedFat": 14,
+    "Carbohydrates": 100,
+    "Sugar": 8,
+    "Protein": 42
+  },
+  {
+    "PizzaType": "Four Cheese",
+    "ServingSize": "30cm Durchmesser",
+    "Calories": 950,
+    "Fat": 45,
+    "SaturatedFat": 18,
+    "Carbohydrates": 90,
+    "Sugar": 6,
+    "Protein": 50
+  },
+  {
+    "PizzaType": "BBQ Chicken",
+    "ServingSize": "30cm Durchmesser",
+    "Calories": 1050,
+    "Fat": 30,
+    "SaturatedFat": 10,
+    "Carbohydrates": 120,
+    "Sugar": 20,
+    "Protein": 60
+  },
+  {
+    "PizzaType": "Funghi",
+    "ServingSize": "30cm Durchmesser",
+    "Calories": 800,
+    "Fat": 20,
+    "SaturatedFat": 8,
+    "Carbohydrates": 100,
+    "Sugar": 5,
+    "Protein": 35
+  },
+  {
+    "PizzaType": "Kebab",
+    "ServingSize": "30cm Durchmesser",
+    "Calories": 1100,
+    "Fat": 40,
+    "SaturatedFat": 15,
+    "Carbohydrates": 105,
+    "Sugar": 10,
+    "Protein": 60
+  },
+  {
+    "PizzaType": "Sucuk",
+    "ServingSize": "30cm Durchmesser",
+    "Calories": 1000,
+    "Fat": 35,
+    "SaturatedFat": 14,
+    "Carbohydrates": 95,
+    "Sugar": 8,
+    "Protein": 55
   }
 ]

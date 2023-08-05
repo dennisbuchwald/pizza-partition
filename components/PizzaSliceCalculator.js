@@ -379,7 +379,7 @@ const PizzaSliceCalculator = () => {
       case 4:
         return (
           <StyledLabel>
-            Wie teuer war die Pizza?
+            Wie teuer war die Pizza in €?
             <StyledInput
               type="number"
               value={price}
